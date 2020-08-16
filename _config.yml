@@ -98,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -106,3 +106,8 @@ deploy:
   type: git
   repo: https://github.com/ninezhang/ninezhang.github.io
   branch: gh-pages
+
+# next 7.8.0
+theme_config:
+  # 主题
+  scheme: Gemini
