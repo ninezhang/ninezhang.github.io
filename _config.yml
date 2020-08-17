@@ -107,7 +107,73 @@ deploy:
   repo: https://github.com/ninezhang/ninezhang.github.io
   branch: gh-pages
 
-# next 7.8.0
+# 主题 next 7.8.0
 theme_config:
-  # 主题
+  # 布局
   scheme: Gemini
+  darkmode: true
+  #
+  menu:
+    home: / || home
+    about: /about/ || user
+    tags: /tags/ || tags
+    categories: /categories/ || th
+    archives: /archives/ || archive
+  # 社交链接
+  social:
+    GitHub: https://github.com/ninezhang || github
+  social_icons:
+    transition: true
+  menu_settings:
+    badges: true
+  # 头像
+  avatar:
+    url: https://avatars.githubusercontent.com/u/25565261?s=120
+    rounded: true
+  # 代码高亮
+  highlight_theme: night
+  # 页脚
+  footer:
+    since: 2020
+    icon:
+      name: heart
+      animated: true
+      color: "#f00"
+    powered: false
+  # 进度条
+  pace:
+    enable: true
+    theme: bounce
+  # 使用图标代替符号#来表示文章底部的标签
+  tag_icon: true
+  # CDN
+  vendors:
+    fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
+    anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
+    mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    katex: //cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css
+    copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
+    copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
+    pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
+    jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
+    fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
+    fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
+    mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
+    lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
+    pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
+    quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
+    disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
+    disqusjs_css: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
+    valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
+    gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+    algolia_search: //cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
+    mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
+    velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
+    velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
+    pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
+    pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
+    three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
+    three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
+    canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
+    canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js
+    canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
