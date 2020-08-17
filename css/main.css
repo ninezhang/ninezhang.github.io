@@ -17,6 +17,33 @@
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #282828;
+    --content-bg-color: #333;
+    --card-bg-color: #555;
+    --text-color: #ccc;
+    --link-color: #ccc;
+    --link-hover-color: #eee;
+    --brand-color: #ddd;
+    --brand-hover-color: #ddd;
+    --table-row-odd-bg-color: #282828;
+    --table-row-hover-bg-color: #363636;
+    --menu-item-bg-color: #555;
+    --btn-default-bg: #222;
+    --btn-default-color: #ccc;
+    --btn-default-border-color: #555;
+    --btn-default-hover-bg: #666;
+    --btn-default-hover-color: #ccc;
+    --btn-default-hover-border-color: #666;
+  }
+  img {
+    opacity: 0.75;
+  }
+  img:hover {
+    opacity: 0.9;
+  }
+}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -1153,6 +1180,7 @@ pre .javascript .function {
   margin: 0 auto;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
 }
 .site-author-name {
   color: var(--text-color);
@@ -1177,10 +1205,13 @@ pre .javascript .function {
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #743cfb;
+  background: #ad1aff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1417,9 +1448,10 @@ pre .javascript .function {
   width: 100%;
 }
 .with-love {
-  color: #808080;
+  color: #f00;
   display: inline-block;
   margin: 0 5px;
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .powered-by,
 .theme-info {
@@ -2282,17 +2314,6 @@ ul.breadcrumb li + li:last-child {
     display: none;
   }
 }
-.menu-item-active a::after {
-  background: #bbb;
-  border-radius: 50%;
-  content: ' ';
-  height: 6px;
-  margin-top: -3px;
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  width: 6px;
-}
 .menu .menu-item {
   display: block;
   margin: 0;
@@ -2337,10 +2358,6 @@ ul.breadcrumb li + li:last-child {
 .sub-menu .menu-item span.exturl:hover {
   background: transparent;
   color: #fc6423;
-}
-.sub-menu .menu-item a::after,
-.sub-menu .menu-item span.exturl::after {
-  content: initial !important;
 }
 .sub-menu .menu-item-active a {
   border-bottom-color: #fc6423;
