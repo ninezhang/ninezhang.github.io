@@ -1,0 +1,25 @@
+.headband {
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f00, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff);
+  box-shadow: 0 0 .5em #ffffff80;
+}
+.pace-progress-inner {
+  box-shadow: 0 0 1em #FF000080, 0 0 .5em #FF000080 !important;
+}
+.pace-activity {
+  border-top-color: #8B00FF !important;
+  border-left-color: #8B00FF80 !important;
+}
+.main {
+  min-height: calc(100vh - 68px);
+}
+@media (max-width: 991px) {
+  .main {
+    min-height: calc(100vh - 68px - 111px);
+  }
+}

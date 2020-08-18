@@ -102,6 +102,7 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+## hexo-deployer-git
 deploy:
   type: git
   repo: https://github.com/ninezhang/ninezhang.github.io
@@ -111,14 +112,25 @@ deploy:
 theme_config:
   # 布局
   scheme: Gemini
-  darkmode: true
-  #
+
+  # 搜索
+  ## hexo-generator-searchdb
+  local_search:
+    enable: true
+
+  # 菜单
   menu:
     home: / || home
-    about: /about/ || user
-    tags: /tags/ || tags
-    categories: /categories/ || th
-    archives: /archives/ || archive
+    about: /about || user
+    tags: /tags || tags
+    categories: /categories || th
+    archives: /archives || archive
+
+  # 头像
+  avatar:
+    url: https://cdn.jsdelivr.net/gh/ninezhang/ninezhang.github.io@master/source/images/avatar.jpg
+    rounded: true
+
   # 社交链接
   social:
     GitHub: https://github.com/ninezhang || github
@@ -126,26 +138,44 @@ theme_config:
     transition: true
   menu_settings:
     badges: true
-  # 头像
-  avatar:
-    url: https://avatars.githubusercontent.com/u/25565261?s=120
-    rounded: true
+
+  # 目录
+  toc:
+    number: false
+    expand_all: true
+
+  # 阅读进度条
+  reading_progress:
+    enable: true
+    position: bottom
+    color: 'linear-gradient(90deg, #f00, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff) left / 100vw'
+    height: 2px
+
   # 代码高亮
-  highlight_theme: night
+  codeblock:
+    highlight_theme: night
+    copy_button:
+      enable: true
+      show_result: true
+      style: mac
+
   # 页脚
   footer:
     since: 2020
     icon:
       name: heart
       animated: true
-      color: "#f00"
+      color: '#f00'
     powered: false
+
+  # 使用图标代替符号#来表示文章底部的标签
+  tag_icon: true
+
   # 进度条
   pace:
     enable: true
-    theme: bounce
-  # 使用图标代替符号#来表示文章底部的标签
-  tag_icon: true
+    theme: flash # pace_css设置优先
+
   # CDN
   vendors:
     fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
@@ -171,7 +201,7 @@ theme_config:
     velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
     velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
     pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
-    pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
+    pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-flash.css
     three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
     three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
     canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
